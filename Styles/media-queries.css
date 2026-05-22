@@ -1,0 +1,159 @@
+@media (max-width: 48rem) {
+    .app > * + * {
+        padding-inline: 20px;
+    }
+
+    header {
+        padding-inline: 10px;
+    }
+
+    header .pole-container p {
+        gap: 2px;
+    }
+
+    header .pole-container span {
+        font-size: 1.4rem;
+    }
+
+    header .primary-navigation {
+        position: fixed;
+        z-index: 1000;
+        inset: 0;
+        height: 100vh;
+
+        background-color: black;
+        backdrop-filter: blur(100px);
+
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding-top: 5rem;
+        gap: 2rem;
+        padding-inline: 30px;
+        transform: translateY(-100%);
+        transition: all 350ms linear;
+    }
+    
+    header .primary-navigation[data-visible="true"] {
+        transform: translateY(0);
+    }
+
+    header ul {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .hamburger-bttn {
+        display: flex;
+        position: absolute;
+        z-index: 9999;
+        right: 15px;
+    }
+
+    .hero {
+        padding-bottom: calc(100vh/10);
+        font-size: 0.8rem;
+    }
+
+    .bttns-container button {
+        font-size: 0.8rem;
+    }
+
+    .haircuts-section {
+        display: none;
+    }
+
+    .mobile-haircuts-section {
+        display: flex;
+    }
+
+    .barbers-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .barbers-section h2, 
+    .pricing-section h2,
+    .contact-us-section h2,
+    .booking-section h2{
+        font-size: 2.5rem;
+    }
+
+    .barber {
+        border: 2px solid var(--yellow);
+    }
+
+    .barber .details .name {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+    }
+
+    .barber .details .title {
+        font-size: clamp(0.85rem, 4vw, 1.5rem);
+    }
+
+    .barber .details .about {
+        font-size: clamp(0.9rem, 3.5vw, 1.5rem);
+    }
+
+    .pricing-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-section form {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    footer .copyright-container {
+        flex-direction: column;
+    }
+
+    .reveal-left {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    .reveal-left.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .reveal-right {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    .reveal-right.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 48rem) and (max-width: 1000px) {
+    .barbers-wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .barber .details {
+        gap: 0.5rem;
+    }
+
+    .barber .details .name {
+        font-size: 2rem;
+    }
+
+    .barber .details .title {
+        font-size: 1.2rem;
+    }
+
+    .barber .details .about {
+        font-size: 1rem;
+    }
+
+    .socials svg {
+        height: 25px;
+        width: 25px;
+    }
+}

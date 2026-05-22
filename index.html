@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supreme Barber</title> 
+
+    <!-- Google Fonts Imports -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- CSS Styles Imports -->
+    <link rel="stylesheet" href="./Styles/style.css">
+    <link rel="stylesheet" href="./Styles/media-queries.css">
+    <!-- Swiper JS Imports --> 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+</head>
+<body>
+    <div class="app">
+        <header>
+            <div class="pole-container">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 128 128"><title xmlns="">barber-pole</title><path fill="#FFF" d="m43.22 32.72l.8 62.85l41.77-.27l-.8-64.87z"/><path fill="#D80D1A" d="m42.68 37.74l10.14-5.86l23.44.57l-33.71 23.1z"/><path fill="#1D86FA" d="m43.22 67.23l42.3-28.87l-.27 19.34l-42.17 29.41z"/><path fill="#D80D1A" d="m49.93 95.3l35.46-25.11l-.54 18.53l-13.3 9.54z"/><path fill="#A1D2D6" d="m40.53 32.45l.81 64.06l3.89-1.48l-.8-64.06zm42.71-1.08l.4 63.93l3.87-.44L87 31.24z"/><path fill="#C8C8C8" d="M40.05 33.09c.64.71 45.97.16 46.76-.24s4.81-3.73 4.5-9.05c-.31-5.25-3.94-6.91-3.94-6.91s-.7-5.26-6.75-9.29c-4.29-2.86-9.85-3.69-16.83-3.63c-7.7.07-14.93.54-19.53 5.14c-4.42 4.42-4.6 8.73-4.6 8.73s-3.91 1.2-3.91 7.08c-.01 5.8 4.3 8.17 4.3 8.17m.71 61.37c-.66.55-.79 3.97-.79 3.97s-3.71 2-3.18 6.35c.48 3.89 3.73 5.4 3.73 5.4s1.52 6.58 6.59 10.16c5.4 3.81 10.72 3.97 18.34 3.97c8.26 0 13.89-.64 18.34-4.84c5.1-4.83 5.48-9.84 5.48-9.84s2.94-1.75 2.86-5.72s-3.33-5.48-3.33-5.48s-.68-3.17-1.27-3.97c-.3-.41-12.16-.3-23.82-.24c-11.25.05-22.44-.19-22.95.24"/><path fill="#858585" d="M61.57 120.42c-.08 1.59 8.33 1.55 14.53.16c7.07-1.59 9.37-7.62 8.97-8.1s-7.54-.32-7.94.08s-2.22 4.13-5.32 5.4s-10.18 1.25-10.24 2.46m-24.53-14.59l54.95-.25s-.18 1.16-.93 2.29c-.73 1.09-1.78 1.75-1.78 1.75l-48.72.57s-1.46-.79-2.09-1.57c-1.39-1.72-1.43-2.79-1.43-2.79"/><path fill="#E1E0E0" d="m36.8 103.1l55.14-.71s-.18-1.45-1.16-2.54c-.82-.92-1.98-1.43-1.98-1.43l-49.54.48s-1 .74-1.59 1.59c-.71 1.03-.87 2.61-.87 2.61m-.86-80.24s11.02-2.16 27.14-2.4s27.73.71 27.73.71s-.57-1.9-1.45-2.85s-1.98-1.43-1.98-1.43s-15.11-.55-24.25-.63c-11.04-.09-23.47 1.58-23.47 1.58s-1.33.38-2.23 1.55c-1.28 1.65-1.49 3.47-1.49 3.47"/><path fill="#858585" d="M35.76 25.96s8.58-1.68 27.71-1.92s27.83 1.15 27.83 1.15s.08 1.16-.3 2.27c-.42 1.24-1.08 2.06-1.08 2.06s-16.45-1.1-26.45-1.02s-26.32 1.66-26.32 1.66s-.69-1.19-.93-1.9c-.23-.74-.46-2.3-.46-2.3"/><path fill="#FFF" d="M60.56 19.45c0 .85-5.63 1.35-11.61 1.71c-3.35.2-9.26 1.85-9.26-.36s2.14-2.63 9.4-2.78s11.47.29 11.47 1.43m.43-13.17c.19.54-2.85 1.57-5.2 4.06c-1.66 1.76-2.21 3.42-3.35 3.85s-7.26 1-7.34-.28c-.1-1.78 1.18-4.6 4.2-6.27c4.78-2.65 11.33-2.36 11.69-1.36"/></svg>
+                <p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 56 56"><title xmlns="">scissors-alt</title><path fill="currentColor" d="M25.025 27.438L13.29 16.653a11.8 11.8 0 0 1-3.82-8.797L9.488 6L28 24.47L46.513 6l.036 1.697a11.8 11.8 0 0 1-3.794 8.927L31.01 27.473l5.144 5.132a9.3 9.3 0 0 1 4.538-1.177c5.14 0 9.308 4.157 9.308 9.286S45.833 50 40.692 50c-5.14 0-9.307-4.157-9.307-9.286a9.23 9.23 0 0 1 1.927-5.659l-5.268-4.842l-5.308 4.904a9.23 9.23 0 0 1 1.88 5.597c0 5.129-4.168 9.286-9.308 9.286S6 45.843 6 40.714s4.167-9.286 9.308-9.286c1.648 0 3.195.427 4.538 1.177zM15.3 47a6 6 0 1 0 0-12a6 6 0 0 0 0 12m25.4 0a6 6 0 1 0 0-12a6 6 0 0 0 0 12M28 29a1.5 1.5 0 1 0 0-3a1.5 1.5 0 0 0 0 3"/></svg>
+                    <span id="typewriter"></span>
+                </p>
+            </div>
+            
+            <button class="hamburger-bttn" aria-controls="" aria-expanded="false">
+                <svg fill="white" class="hamburger" viewBox="0 0 100 100" width="30">
+                    <rect class="line top" width="80" height="10" x="10" y="25" rx="5"></rect>
+                    <rect class="line middle" width="80" height="10" x="10" y="45" rx="5"></rect>
+                    <rect class="line bottom" width="80" height="10" x="10" y="65" rx="5"></rect>
+                </svg>
+            </button>
+
+            <nav class="primary-navigation" data-visible="false">
+                <ul>
+                    <li class="tab active">
+                        <a href="#home">Home</a>
+                    </li>
+                    <li class="tab">
+                        <a href="#haircuts">Haircuts</a>
+                    </li>
+                    <li class="tab">
+                        <a href="#barbers">Barbers</a>
+                    </li>
+                    <li class="tab">
+                        <a href="#pricing">Our Pricing</a>
+                    </li>
+                    <li class="tab">
+                        <a href="#contact-us">Contact Us</a>
+                    </li>
+                </ul>
+
+                <a href="#book-us">
+                    <button class="book-bttn tab">Book Now</button>
+                </a>
+            </nav> 
+        </header>
+
+        <section class="hero" id="home">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">crown</title><path fill="currentColor" d="M5 20v-2h14v2zm0-3.5L3.725 8.475q-.05 0-.113.013T3.5 8.5q-.625 0-1.062-.438T2 7t.438-1.062T3.5 5.5t1.063.438T5 7q0 .175-.038.325t-.087.275L8 9l3.125-4.275q-.275-.2-.45-.525t-.175-.7q0-.625.438-1.063T12 2t1.063.438T13.5 3.5q0 .375-.175.7t-.45.525L16 9l3.125-1.4q-.05-.125-.088-.275T19 7q0-.625.438-1.063T20.5 5.5t1.063.438T22 7t-.437 1.063T20.5 8.5q-.05 0-.112-.012t-.113-.013L19 16.5z"/></svg>
+
+                <p id="supreme-barber-text">Supreme <br><span>Barber</span></p>
+
+                <p>Discover Your Next Look</p>
+
+                <p>Explore Our Collection of Premium Haircuts and Styles</p>
+
+                <div class="bttns-container">
+                    <a href="#">
+                        <button class="book-bttn">Book Appointment</button>
+                    </a>
+                    <a href="#">
+                        <button class="view-haircuts-bttn">View Haircuts</button>
+                    </a>
+                </div>
+            </div>
+        </section>
+        
+        <div class="haircuts" id="haircuts">
+            <section class="haircuts-section">
+                <h2 class="reveal">Haircuts</h2>
+                <div class="men-haircut-container reveal-left">
+                    <p>Men Haircuts</p>
+                    <img src="./Assets/male-haircut-1.png" alt="">
+                    <img src="./Assets/male-haircut-2.png" alt="">
+                    <img src="./Assets/male-haircut-3.png" alt="">
+                    <img src="./Assets/male-haircut-4.png" alt="">
+                    <img src="./Assets/male-haircut-5.png" alt="">
+                    <img src="./Assets/male-haircut-6.png" alt="">
+                    <img src="./Assets/male-haircut-7.png" alt="">
+                    <img src="./Assets/male-haircut-8.png" alt="">
+                    <img src="./Assets/male-haircut-9.png" alt="">
+                    <img src="./Assets/male-haircut-10.png" alt="">
+                </div>
+                <div class="ladies-haircut-container reveal-right">
+                    <p>Ladies Haircuts</p>
+                    <img src="./Assets/female-haircut-1.png" alt="">
+                    <img src="./Assets/female-haircut-2.png" alt="">
+                    <img src="./Assets/female-haircut-3.png" alt="">
+                    <img src="./Assets/female-haircut-4.png" alt="">
+                    <img src="./Assets/female-haircut-5.png" alt="">
+                    <img src="./Assets/female-haircut-6.png" alt="">
+                    <img src="./Assets/female-haircut-7.png" alt="">
+                    <img src="./Assets/female-haircut-8.png" alt="">
+                    <img src="./Assets/female-haircut-9.png" alt="">
+                    <img src="./Assets/female-haircut-10.png" alt="">
+                </div>
+            </section>
+
+            <section class="mobile-haircuts-section">
+                <h2 class="reveal">Haircuts</h2>
+                <div class="haircuts-wrapper reveal">
+                    <div class="men-haircuts-container">
+                        <p>Male haircuts</p>
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <img src="./Assets/male-haircut-1.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./Assets/male-haircut-2.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./Assets/male-haircut-3.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./Assets/male-haircut-4.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./Assets/male-haircut-5.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./Assets/male-haircut-6.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./Assets/male-haircut-7.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./Assets/male-haircut-8.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./Assets/male-haircut-9.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./Assets/male-haircut-10.png">
+                                </div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                    <div class="ladies-haircut-container">
+                        <p>Female haircuts</p>
+                        <div class="swiper">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <img src="./Assets/female-haircut-1.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./Assets/female-haircut-2.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./Assets/female-haircut-3.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./Assets/female-haircut-4.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./Assets/female-haircut-5.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./Assets/female-haircut-6.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./Assets/female-haircut-7.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./Assets/female-haircut-8.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./Assets/female-haircut-9.png">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="./Assets/female-haircut-10.png">
+                                </div>
+                            </div>
+                            <!-- If we need pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <section class="barbers-section" id="barbers">
+            <h2 class="reveal">Our Barbers</h2>
+            <div class="barbers-wrapper reveal-stagger">
+                <div class="barber barber-1">
+                    <img src="./Assets/Barber-1.jpg">
+                    <div class="details">
+                        <p class="name">Nate The Barber</p>
+                        <p class="title">Owner</p>
+                        <p class="about">STAYFRESH</p>
+                        <div class="socials">
+                            <a href="https://www.facebook.com/thehairmasterz" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">twotone-facebook</title><path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"/></svg>
+                            </a>
+                            <a href="https://www.instagram.com/the_hairmasterz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">instagram</title><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>
+                            </a>                            
+                            <a href="https://www.threads.com/@the_hairmasterz?xmt=AQG0fx_ppkCo5F1WxvTtpJRF0D4gIEL9y0XZ6Zvl_58K1L4" target="_blank"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">threads-line</title><g fill="none" fill-rule="evenodd"><path d="m12.594 23.258l-.012.002l-.071.035l-.02.004l-.014-.004l-.071-.036q-.016-.004-.024.006l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.016-.018m.264-.113l-.014.002l-.184.093l-.01.01l-.003.011l.018.43l.005.012l.008.008l.201.092q.019.005.029-.008l.004-.014l-.034-.614q-.005-.019-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.003-.011l.018-.43l-.003-.012l-.01-.01z"/><path fill="currentColor" d="M5.45 4.623C6.997 2.974 9.24 2 12.017 2c4.565 0 7.592 2.631 8.55 6.277a1 1 0 0 1-1.935.508C17.905 6.022 15.676 4 12.016 4c-2.286 0-3.98.789-5.106 1.99c-1.136 1.212-1.769 2.923-1.769 4.885v2.25c0 1.962.633 3.673 1.769 4.884C8.036 19.212 9.73 20 12.016 20c1.655 0 2.968-.384 3.976-1.005c1.015-.625 1.62-1.454 1.79-2.405c.195-1.096-.045-1.848-.458-2.391a3.2 3.2 0 0 0-.814-.741c-.135.749-.376 1.456-.74 2.01c-1.342 2.039-3.908 2.214-5.6 1.539c-.916-.365-1.701-1.364-1.945-2.435a3 3 0 0 1 .141-1.843c.265-.636.756-1.178 1.455-1.59c.692-.409 1.72-.597 2.739-.625c.614-.017 1.28.024 1.95.133c-.14-.65-.377-1.135-.644-1.384c-.484-.45-1.286-.767-2.09-.762c-.777.006-1.436.305-1.83.935a1 1 0 1 1-1.696-1.06c.837-1.338 2.216-1.865 3.513-1.875c1.27-.009 2.578.472 3.466 1.298c.898.836 1.284 2.207 1.384 3.454c.874.381 1.7.94 2.305 1.737c.781 1.03 1.117 2.358.833 3.951c-.29 1.624-1.315 2.898-2.71 3.757C15.673 21.54 13.985 22 12.016 22c-2.776 0-5.02-.974-6.565-2.623c-1.536-1.638-2.31-3.864-2.31-6.252v-2.25c0-2.388.774-4.614 2.31-6.252ZM14.6 12.7a8.4 8.4 0 0 0-1.986-.186c-.891.024-1.516.193-1.777.347c-.384.227-.55.458-.624.637a1.02 1.02 0 0 0-.038.63c.122.536.525.938.736 1.021c1.126.45 2.535.212 3.188-.78c.235-.358.422-.96.5-1.669Z"/></g></svg>
+                            </a>
+                            <a href="https://www.tiktok.com/@the_hairmasterz?fbclid=IwY2xjawR8YV1leHRuA2FlbQIxMABicmlkETFaS0llNmdMcVYwam9rbTJsc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHjNWrDAFjODDzs8dbwH19tDja4HNY4qzFvo8xwI8Zf2Qcr3bmuZETpGZKqeE_aem_Sz0hwSEdCnaCw3qxikLKLw" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">baseline-tiktok</title><path fill="currentColor" d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48"/></svg>
+                            </a>
+                            <a href="https://www.youtube.com/@the_hairmasterz?fbclid=IwY2xjawR8YadleHRuA2FlbQIxMABicmlkETFaS0llNmdMcVYwam9rbTJsc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHv3uSaB_AD4ZXQP7r0tEp0_uwkg_g4t0qj6UNtgga6leL7mLFp3naoQ7AUQA_aem_6F2aRz23M69t2kiiek-w9w" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">youtube</title><path fill="currentColor" d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73"/></svg>
+                            </a>
+                            <a href="mailto:thehairmasterz@gmail.com" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">baseline-email</title><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 4l-8 5l-8-5V6l8 5l8-5z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="barber barber-2">
+                    <img src="./Assets/Barber-2.jpg">
+                    <div class="details">
+                        <p class="name">Celebrity Barber</p>
+                        <p class="title">Barber</p>
+                        <p class="about">Celebrity Barber | Confidence Architect <br>Precision Cuts. <br>Premium Experience. <br>Where Everyone Is A Celebrity 👑 #KOTG</p>
+                        <div class="socials">
+                            <a href="https://www.facebook.com/celebritybarberafrica/?ref=NONE_xav_ig_profile_page_web#" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">twotone-facebook</title><path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"/></svg>
+                            </a>
+                            <a href="https://www.instagram.com/iam_celebrity_barber?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">instagram</title><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>
+                            </a>
+                            <a href="youtube.com/@celebritybarberTv?si=gcjtEyH_rFlkVD2p&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnUJepCIdrMbKIns5RJN9hmBO78skikaum3i3QcL29FgWTv8KaS4iIBqP0LmM_aem_e_A80xojir9dZtQ-HGJrAQ" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">youtube</title><path fill="currentColor" d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="barber barber-3">
+                    <img src="./Assets/Barber-3.jpeg">
+                    <div class="details">
+                        <p class="name">Sly Huncho</p>
+                        <p class="title">Co-owner</p>
+                        <p class="about">GET SLYCED</p>
+                        <div class="socials">
+                            <a href="https:://www.facebook.com/profile.php?id=100087448801786" target="_blank"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">twotone-facebook</title><path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"/></svg>
+                            </a>
+                            <a href="https://www.instagram.com/sly.huncho?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">instagram</title><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>
+                            </a>
+                            <a href="https://www.tiktok.com/@Getslyced?fbclid=IwY2xjawR8ZgNleHRuA2FlbQIxMABicmlkETFiZDdTUUMyU3hKU2p6bzdmc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHoibKURk0ws2rYAcPnXnIoNp4S1L-rH32BaNvjadprQhOCwB8WpBavkbO6dW_aem_rvY62PCvixPuqpz-lGOg5g" target="_blank"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">baseline-tiktok</title><path fill="currentColor" d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="barber barber-4">
+                    <img src="./Assets/Barber-4.jpg">
+                    <div class="details">
+                        <p class="name">Richiee</p>
+                        <p class="title">Barber</p>
+                        <p class="about">Have confidence in yourself and your abilities. <br>DM for bookings</p>
+                        <div class="socials">
+                            <a href="https://www.instagram.com/richieescut?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">instagram</title><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="barber barber-5">
+                    <img src="./Assets/Barber-5.jpg">
+                    <div class="details">
+                        <p class="name">Haircut KVNG</p>
+                        <p class="title">Barber</p>
+                        <p class="about">𝐏𝐒𝐀𝐋𝐌 𝟐𝟑.4🙏🕊️ || PRO-BARBER💈🇬🇭🇦🇪 <br>|| Believe what you do🙏</p>
+                        <div class="socials">                            
+                            <a href="https://www.instagram.com/hk_haircutkvng?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">instagram</title><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>
+                            </a>                            
+                            <a href="mailto:khaircut80@gmail.com" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">baseline-email</title><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 4l-8 5l-8-5V6l8 5l8-5z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="barber barber-6">
+                    <img src="./Assets/Barber-6.jpg">
+                    <div class="details">
+                        <p class="name">GuyMor</p>
+                        <p class="title">Barber</p>
+                        <p class="about">Let's Groom Together and See how You were Created</p>
+                        <div class="socials">
+                            <a href="https://www.facebook.com/profile.php?id=61553797413541&ref=NONE_xav_ig_profile_page_web#" target="_blank"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">twotone-facebook</title><path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"/></svg>
+                            </a>
+                            <a href="https://www.instagram.com/guymor_haircut?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">instagram</title><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>
+                            </a>
+                            <a href="https://www.tiktok.com/@guy_mor?_t=8hEXW69cn0X&_r=1&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGn3l3AO1xSg0YExDhlZIyCe4sU4oCtZ9J4EuSkTlUxs-JOrG6BsjUptqqj1_M_aem_C_wtywi2tA-EpexaR3ztiA" target="_blank"> 
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">baseline-tiktok</title><path fill="currentColor" d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48"/></svg>
+                            </a>
+                            <a href="https://www.youtube.com/@GuyMorHaircut?si=VoPChix97v2puucQ&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPOTM2NjE5NzQzMzkyNDU5AAGnQ-1YpT2dDRx7hfalAJeBoJrVYsZvIcusecYqGMDeOjoGJJTFqJeu2jf44V4_aem_c7QFXArZeezKhQW2VjO00w" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">youtube</title><path fill="currentColor" d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73"/></svg>
+                            </a>
+                            <a href="https://api.whatsapp.com/send?phone=233542726110&text=Thank%20you%20for%20contacting%20GuyMor%20Haircut%20%F0%9F%92%88.I%E2%80%99m%20Located%20%F0%9F%93%8Din%20Ghana%20%F0%9F%87%AC%F0%9F%87%AD%20%2CKumasi%20Krofurom%20Traffic%20light%20%F0%9F%9A%A6%2CJanet%20%26Sons%20Building%20.%20Please%20How%20Do%20You%20want%20Your%20Haircut%20Done%20%E2%9C%85%20%0A1%2CDown%20Cut(Buzz%0A2%2CTaper%20Fade%20Cut%0A3%2CPerm%20Cut%0A4%2CPixie%20Cut%0A5%2CFinger%20Waves%20%0A6%2C%20Afro%20style%20%0A7%2CShort%20Dread%20faded%20Cut%0A8%2C%20Curly%20Faded%20Cut%0A9%2C%20Hand%20Twist%20faded%20Cut%0A10%2C%20Color%20Hairstyle%20%0A11%2CMakeup%20%26%20Haircut" target="_blank">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">baseline-whatsapp</title><path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2c-5.46 0-9.91 4.45-9.91 9.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21c5.46 0 9.91-4.45 9.91-9.91c0-2.65-1.03-5.14-2.9-7.01m-7.01 15.24c-1.48 0-2.93-.4-4.2-1.15l-.3-.18l-3.12.82l.83-3.04l-.2-.31a8.26 8.26 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24c2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.02 4.54-3.68 8.23-8.22 8.23m4.52-6.16c-.25-.12-1.47-.72-1.69-.81c-.23-.08-.39-.12-.56.12c-.17.25-.64.81-.78.97c-.14.17-.29.19-.54.06c-.25-.12-1.05-.39-1.99-1.23c-.74-.66-1.23-1.47-1.38-1.72c-.14-.25-.02-.38.11-.51c.11-.11.25-.29.37-.43s.17-.25.25-.41c.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31c-.22.25-.86.85-.86 2.07s.89 2.4 1.01 2.56c.12.17 1.75 2.67 4.23 3.74c.59.26 1.05.41 1.41.52c.59.19 1.13.16 1.56.1c.48-.07 1.47-.6 1.67-1.18c.21-.58.21-1.07.14-1.18s-.22-.16-.47-.28"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>     
+        
+        <section class="pricing-section" id="pricing">
+            <h2 class="reveal">Our Pricing</h2>
+            <div class="pricing-wrapper reveal-stagger">
+                <div class="haircut-type">
+                    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">scissors</title><path fill="currentColor" d="m19 3l-6 6l2 2l7-7V3m-10 9.5a.5.5 0 0 1-.5-.5a.5.5 0 0 1 .5-.5a.5.5 0 0 1 .5.5a.5.5 0 0 1-.5.5M6 20a2 2 0 0 1-2-2a2 2 0 0 1 2-2a2 2 0 0 1 2 2a2 2 0 0 1-2 2M6 8a2 2 0 0 1-2-2a2 2 0 0 1 2-2a2 2 0 0 1 2 2a2 2 0 0 1-2 2m3.64-.36c.23-.5.36-1.05.36-1.64a4 4 0 0 0-4-4a4 4 0 0 0-4 4a4 4 0 0 0 4 4c.59 0 1.14-.13 1.64-.36L10 12l-2.36 2.36C7.14 14.13 6.59 14 6 14a4 4 0 0 0-4 4a4 4 0 0 0 4 4a4 4 0 0 0 4-4c0-.59-.13-1.14-.36-1.64L12 14l7 7h3v-1z"/></svg></div>
+                    <p class="type">Classic Cut</p>
+                    <p class="about">Precision haircut tailored to your style and preferences</p>
+                    <p class="price">&#8373;80</p>
+                </div>
+                <div class="haircut-type">
+                    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">water</title><path fill="currentColor" d="M12 20a6 6 0 0 1-6-6c0-4 6-10.75 6-10.75S18 10 18 14a6 6 0 0 1-6 6"/></svg></div>
+                    <p class="type">Hot Towel Shave</p>
+                    <p class="about">Traditional straight razor shave with premium products</p>
+                    <p class="price">&#8373;40</p>
+                </div>
+                <div class="haircut-type">
+                    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-sparkles w-8 h-8 text-[#D4AF37]" data-fg-d95f13="1.14:3.21:/src/app/components/Services.tsx:50:19:1848:51:e:service.icon" data-fgid-d95f13=":r20:"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"></path><path d="M20 3v4"></path><path d="M22 5h-4"></path><path d="M4 17v2"></path><path d="M5 18H3"></path></svg></div>
+                    <p class="type">Premium Grooming</p>
+                    <p class="about">Complete grooming package with cut, shave, and styling</p>
+                    <p class="price">&#8373;150</p>
+                </div>
+                <div class="haircut-type">
+                    <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 512 512"><title xmlns="">beard</title><path fill="currentColor" d="M319 35.375c-27.305-.247-52.415 19.47-62.063 46.094c-9.726-26.856-35.196-46.656-62.78-46.064c-15.11.325-30.85 6.764-45 21.532c-11.47 11.968-17.863 27.782-24.407 43.75c-15 22.49-35.066 39.27-64.156 45.874c7 6.374 14.63 9.69 22.656 11.063c-14.192 7.828-33.583 12.154-61.28 10.78c20.528 26.327 52.643 35.282 86.28 34.532c60.716-2.34 91.448-33.326 109.438-64.875l16.218 9.25c-20.387 35.754-59.15 71.513-127.28 74.094v.72c0 6.067 1.32 13.4 3.686 21.686l-.25-.468l29.5 114.875l4.625-38.626c17.095 31.46 37.67 64.792 56.532 93.97l1.624-46.127c5.83 38.514 20.68 73.426 39.062 106.97c9.337 13.507 15.25 21.78 15.25 21.78s6.953-9.693 17.875-25.562c.07-.1.152-.213.22-.313c20.76-32.818 38.056-67.256 46.438-105.906l-1.063 37.438c9.342-14.666 18.923-30.088 28.156-45.656v28.468l40.533-104.125c9.877-21.585 16.512-40.562 17.656-54.342c-65.713-7.917-111.206-41.86-132.314-78.875l16.22-9.25c19.702 34.552 66.54 68.93 138.312 71.062c15.085-.3 29.905-3.623 45.593-11.313c-14.823.118-27.478-1.08-38.53-3.437c23.34-5.136 43.576-16.795 56.125-37.97c-102.54 21.26-90.343-61.02-127.188-99.468c-14.37-14.994-30.37-21.424-45.687-21.562z"/></svg></div>
+                    <p class="type">Beard Sculpting</p>
+                    <p class="about">Expert beard trimming and shaping for the perfect look</p>
+                    <p class="price">&#8373;30</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-us-section" id="contact-us">
+            <form class="reveal">
+                <h2>Contact Us</h2>
+                <input type="text" placeholder="Enter your name">
+                <input type="email" placeholder="Enter your email">
+                <textarea placeholder="Enter your message"></textarea>
+                <button>Submit</button>
+            </form>
+        </section>
+
+        <section class="booking-section" id="book-us">
+            <div class="text-container reveal">
+                <h2>Book Appointment</h2>
+                <p>Schedule your visit and experience excellence</p>
+            </div>
+
+            <div class="contact-info reveal-left">
+                <h3>Contact Info</h3>
+
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">location</title><path fill="currentColor" d="M12 11.5A2.5 2.5 0 0 1 9.5 9A2.5 2.5 0 0 1 12 6.5A2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7"/></svg>
+                    <a href="https://maps.app.goo.gl/5X67xgoYVS9gzeuM7">Osu, H P Nyemitei St, Accra</a>
+                </div>
+
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">call-sharp</title><path fill="currentColor" d="M19.95 21q-3.125 0-6.187-1.35T8.2 15.8t-3.85-5.55T3 4.05V3h5.9l.925 5.025l-2.85 2.875q.55.975 1.225 1.85t1.45 1.625q.725.725 1.588 1.388T13.1 17l2.9-2.9l5 1.025V21z"/></svg>
+                    <p>+233551897876</p>
+                </div>
+
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">baseline-email</title><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 4l-8 5l-8-5V6l8 5l8-5z"/></svg>
+                    <p>info@supremebarber.com</p>
+                </div>
+
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">clock</title><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m4.2 14.2L11 13V7h1.5v5.2l4.5 2.7z"/></svg>
+                    <p>Mon - Sat: 9AM - 8PM <br>Sunday: Closed</p>
+                </div>
+            </div>
+
+            <form class="reveal-right">
+                <input type="text" placeholder="Full Name">
+                <input type="email" placeholder="Email">
+                <input type="tel" placeholder="Phone number">
+                <select>
+                    <option>Select Service</option>
+                    <option>Classic Cut &#8373;80</option>
+                    <option>Hot Towel Shave &#8373;40</option>
+                    <option>Premium Grooming &#8373;150</option>
+                    <option>Beard Sculpting &#8373;30</option>
+                </select>
+                <div class="date">
+                    <input type="date">
+                </div>
+                <div class="time">
+                    <input type="time">
+                </div>
+                <button>Book</button>
+            </form>
+        </section>
+
+        <footer>
+            <div class="footer-wrapper reveal">
+                <div class="about-us-container">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">crown</title><path fill="currentColor" d="M5 20v-2h14v2zm0-3.5L3.725 8.475q-.05 0-.113.013T3.5 8.5q-.625 0-1.062-.438T2 7t.438-1.062T3.5 5.5t1.063.438T5 7q0 .175-.038.325t-.087.275L8 9l3.125-4.275q-.275-.2-.45-.525t-.175-.7q0-.625.438-1.063T12 2t1.063.438T13.5 3.5q0 .375-.175.7t-.45.525L16 9l3.125-1.4q-.05-.125-.088-.275T19 7q0-.625.438-1.063T20.5 5.5t1.063.438T22 7t-.437 1.063T20.5 8.5q-.05 0-.112-.012t-.113-.013L19 16.5z"/></svg>
+                        <p>SUPREME <span>BARBER</span></p>
+                    </div>
+                    <p>Premium grooming services for the modern gentleman.</p>
+                    <div class="socials">
+                        <a href="#home">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">twotone-facebook</title><path fill="currentColor" d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95"/></svg>
+                        </a>
+                        <a href="#home">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">instagram</title><path fill="currentColor" d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4zm9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8A1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5a5 5 0 0 1-5 5a5 5 0 0 1-5-5a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3a3 3 0 0 0 3 3a3 3 0 0 0 3-3a3 3 0 0 0-3-3"/></svg>
+                        </a>
+                        <a href="#home">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><title xmlns="">baseline-tiktok</title><path fill="currentColor" d="M16.6 5.82s.51.5 0 0A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6c0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64c0 3.33 2.76 5.7 5.69 5.7c3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="quick-links-container">
+                    <p>QUICK LINKS</p>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#haircuts">Haircuts</a></li>
+                        <li><a href="#barbers">Barbers</a></li>
+                        <li><a href="#pricing">Our Pricing</a></li>
+                        <li><a href="#contact-us">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="opening-hours-container">
+                    <p>OPENING HOURS</p>
+                    <p>Monday - Friday: 9AM - 8PM</p>
+                    <p>Saturday: 9AM - 8PM</p>
+                    <p>Sunday: Closed</p>
+                </div>
+            </div>
+            <div class="copyright-container">
+                <p>
+                    &copy;2026 Supreme Barber. All rights reserved.
+                </p>
+                <p class="developer-name">Built By Mac Ty</p>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

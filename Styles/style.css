@@ -1,0 +1,909 @@
+:root {
+    --yellow: rgb(241, 245, 18);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: black;
+    overflow-x: hidden;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    gap: 120px;
+}
+
+.app > * + * {
+    padding-inline: 50px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background-color: hsl(0 0 100% / 0.1);
+    backdrop-filter: blur(100px);
+}
+
+header .pole-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .pole-container p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+header .pole-container p svg {
+    color: var(--yellow);
+}
+
+header .pole-container svg {
+    width: 35px;
+    height: 35px;
+}
+
+header .pole-container span {
+    color: var(--yellow);
+    display: block;
+    width: 227px;
+    font-family: "Orbitron", sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+#typewriter::after, .developer-name::after{
+    content: "|";
+    color: #fff;
+    animation: blink 700ms step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+header .primary-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    z-index: 9999;
+}
+
+
+header ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+header ul li {
+    list-style-type: none;
+}
+
+header li a {
+    font-size: 1.1rem;
+    position: relative;
+    transition: all 200ms ease;
+}
+
+header li a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    right: 50%;
+    height: 2px;
+    background-color: var(--yellow);
+    border-radius: 100vw;
+    transition: all 200ms ease;
+}
+
+header li a:hover::after {
+    left: 0;
+    right: 0;
+}
+
+header li a:hover {
+    color: var(--yellow);
+}
+
+header li.active a {
+    color: var(--yellow);
+    font-weight: 700;
+}
+
+header li.active a::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: var(--yellow);
+    border-radius: 100vw;
+}
+
+header > a {
+    display: block;
+}
+
+header .book-bttn {
+    border: 1.5px solid var(--yellow);
+    border-radius: 6px;
+    background-color: var(--yellow);
+    color: black;
+    padding: 9px 24px;
+    font-size: 1rem;
+    transition: all 200ms ease;
+}
+
+header .book-bttn:hover {
+    background-color: transparent;
+    color: var(--yellow);
+}
+
+
+/* HAMBURGER ICON */
+.hamburger-bttn {
+    background-color: transparent;
+    border-radius: 4px;
+    border: none;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.hamburger-bttn .line {
+    transition: 
+        y 150ms ease-in 150ms,
+        rotate 150ms ease-in,
+        opacity 0ms 150ms;
+
+    transform-origin: center;
+}
+
+.hamburger-bttn[aria-expanded="true"] .line {
+    transition: 
+        y 150ms ease-in,
+        rotate 150ms ease-in 150ms,
+        opacity 0ms 150ms;
+}
+
+.hamburger-bttn[aria-expanded="true"] :is(.top, .bottom) {
+    y: 45;
+}
+
+.hamburger-bttn[aria-expanded="true"] .top {
+    rotate: 45deg;
+}
+
+.hamburger-bttn[aria-expanded="true"] .middle {
+    opacity: 0;
+}
+
+.hamburger-bttn[aria-expanded="true"] .bottom {
+    rotate: -45deg
+}
+
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6)), url("../Assets/Barber Shop 3.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding-top: 75px;
+}
+
+
+.hero > div:first-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero svg {
+    height: 100px;
+    width: 100px;
+    color: var(--yellow);
+}
+
+#supreme-barber-text,
+#supreme-barber-text span {
+    font-family: "Orbitron", sans-serif;
+    font-size: clamp(3.5rem, 7vw, 5rem);
+    font-weight: 700;
+    text-align: center; 
+    letter-spacing: 8px;  
+}
+
+#supreme-barber-text span {
+    color: var(--yellow);
+    font-size: clamp(3rem, 5.5vw, 4rem);
+}
+
+.bttns-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+}
+
+.bttns-container a {
+    display: block;
+}
+
+.bttns-container button {
+    padding: 10px 30px;
+    font-size: 1rem;
+    transition: all 200ms linear;
+}
+
+.bttns-container .book-bttn {
+    background-color: var(--yellow);
+    border: 1.5px solid var(--yellow);
+}
+
+.bttns-container .book-bttn:hover {
+    color: var(--yellow);
+    background-color: transparent;
+}
+
+.bttns-container .view-haircuts-bttn {
+    background-color: transparent;
+    border: 1.5px solid var(--yellow);
+    color: var(--yellow);
+}
+
+.bttns-container .view-haircuts-bttn:hover {
+    color: black;
+    background-color: var(--yellow);
+}
+
+.haircuts-section {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 3rem;
+    overflow: hidden;
+}
+
+.haircuts-section h2, 
+.barbers-section h2, 
+.pricing-section h2,
+.contact-us-section h2,
+.booking-section h2 {
+    font-size: 3rem;
+    color: var(--yellow);
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.haircuts-section .men-haircut-container,
+.haircuts-section .ladies-haircut-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto 1fr 1fr;
+    column-gap: 25px;
+    row-gap: 25px;
+}
+
+.haircuts-section .men-haircut-container p,
+.haircuts-section .ladies-haircut-container p {
+    color: var(--yellow);
+    font-size: 1rem;
+    grid-column: 1/-1;
+}
+
+.haircuts-section .men-haircut-container > img,
+.haircuts-section .ladies-haircut-container > img {
+    width: 100%;
+    aspect-ratio: 4 / 5.5;
+    border-radius: 8px;
+    box-shadow: 0 0 8px white; 
+    border: 1.75px solid rgba(255, 255, 255, 0.765);
+}
+
+.mobile-haircuts-section {
+    height: fit-content;
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+    overflow: hidden; 
+}
+
+.mobile-haircuts-section h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--yellow);
+}
+
+.mobile-haircuts-section .haircuts-wrapper {
+    width: 100%;
+    flex: 0.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.mobile-haircuts-section p {
+    color: var(--yellow);
+}
+
+.mobile-haircuts-section .men-haircuts-container,
+.mobile-haircuts-section .ladies-haircut-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.swiper {
+    flex: 0.8;
+    width: 100%;
+    overflow: visible !important;
+}
+
+.swiper-wrapper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    border: 2.75px solid var(--yellow);
+    transition: transform 400ms ease, opacity 400ms ease !important;
+    opacity: 0.4;
+    transform: scale(0.9);
+}
+
+.swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.swiper-slide img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    max-height: 726px;
+    border-radius: 12px;
+}
+
+.swiper-pagination-bullet {
+    background-color: white !important;
+    opacity: .7 !important;
+}
+.swiper-pagination-bullet-active {
+    background-color: var(--yellow) !important;
+    opacity: 1 !important;
+}
+
+.barbers-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+.barbers-wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    row-gap: 2rem;
+}
+
+.barber {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.barber::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.barber.barber-5::before, .barber.barber-6::before {
+    background-color: rgba(0, 0, 0, 0.35);
+}
+
+.barber img {
+    width: 100%;
+    aspect-ratio: 4 / 5.25;
+    border-radius: 1rem;
+}
+
+.barber .details {
+    position: absolute;
+    z-index: 2;
+    bottom: 1.5rem;
+    left: 1rem;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.barber .details .name {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.barber .details .title {
+    color: var(--yellow);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.barber .details .about {
+    color: white;
+    font-size: 0.9rem;
+}
+
+.socials {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+}
+
+.socials a {
+    display: block;
+}
+
+.socials svg {
+    height: 25px;
+    width: 25px;
+    color: var(--yellow);
+    transition: all 300ms ease;
+}
+
+.socials a:hover svg {
+    color: white;
+}
+
+.pricing-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.pricing-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.haircut-type {
+    border: 1px solid yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 20px;
+    transition: all 200ms linear;
+}
+
+.haircut-type:hover {
+    transform: scale(1.05);
+}
+
+.haircut-type .icon {
+    width: 100px;
+    height: 100px;
+    padding: 1rem;
+    border-radius: 100vw;
+    background-color: rgba(187, 150, 4, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.haircut-type .icon svg {
+    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    color: var(--yellow);
+}
+
+.haircut-type .type {
+    color: var(--yellow);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.haircut-type .about {
+    color: white;
+    font-size: 0.85rem;
+}
+
+.haircut-type .price {
+    color: var(--yellow);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+.contact-us-section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55)), url("../Assets/Barber\ Shop\ 4.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-us-section form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-us-section form input {
+    padding: 12px 16px;
+    background-color: rgba(255, 255, 255, 0.859);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.contact-us-section form textarea {
+    background-color: rgba(255, 255, 255, 0.859);
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    height: 100px;
+    padding: 12px 16px;
+}
+
+.contact-us-section button {
+    width: fit-content;
+    padding: 12px 3rem;
+    margin: 0 auto;
+    color: black;
+    font-size: 1rem;
+    background-color: var(--yellow);
+    border-radius: 6px;
+    border: none;
+    transition: all 150ms linear;
+}
+
+.contact-us-section button:hover {
+    opacity: 0.7;
+}
+
+.contact-us-section button:focus {
+    transform: scale(0.9);
+}
+
+.booking-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.booking-section .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.booking-section .text-container p {
+    color: white;
+}
+
+.booking-section .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    color: white;
+}
+
+.booking-section .contact-info h3 {
+    color: var(--yellow);
+    font-size: 1.4rem;
+}
+
+.booking-section .contact-info div {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.booking-section .contact-info svg {
+    width: 30px;
+    height: 30px;
+    color: var(--yellow);
+}
+
+.booking-section .contact-info div a,
+.booking-section .contact-info div p {
+    font-size: 0.9rem;
+}
+
+
+.booking-section form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
+
+.booking-section form input,
+.booking-section form select {
+    padding: 0.6rem 0.8rem;
+    width: 100%;
+    outline: none;
+    background-color: rgb(187, 187, 187);
+    border: none;
+}
+
+.booking-section form input[type="date"],
+.booking-section form input[type="time"] {
+    color: transparent;
+}
+
+input[type="date"]:focus,
+input[type="date"]:valid {
+    color: inherit; 
+}
+
+.booking-section form input::placeholder {
+    color: black;
+}
+
+.booking-section .date,
+.booking-section .time {
+    position: relative;
+}
+
+.booking-section .date::before,
+.booking-section .time::before {
+    position: absolute;
+    left: 12px;
+    bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.booking-section .date::before {
+    content: "Date";
+}
+
+.booking-section .time::before {
+    content: "Time";
+}
+
+.booking-section form button {
+    grid-column: 1/-1;
+    width: 50%;
+    margin: 0 auto;
+    background-color: transparent;
+    border: 1.5px solid var(--yellow);
+    padding-block: 0.6rem;
+    font-size: 1rem;
+    color: var(--yellow);
+    transition: all 200ms linear;
+}
+
+.booking-section form button:hover {
+    background-color: var(--yellow);
+    color: black;
+}
+
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    color: white;
+    padding-bottom: 2rem;
+}
+
+.footer-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.footer-wrapper .about-us-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-wrapper .about-us-container > div:first-child {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.footer-wrapper .about-us-container > div:first-child p {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: "Orbitron", sans-serif;
+    color: var(--yellow);
+}
+
+.footer-wrapper .about-us-container > div:first-child span {
+    color: white;
+    font-size: 1.2rem;
+    font-family: "Orbitron", sans-serif;;
+}
+
+.footer-wrapper .about-us-container > div:first-child svg {
+    width: 60px;
+    height: 60px;
+    color: var(--yellow);
+}
+
+.footer-wrapper .about-us-container > p {
+    font-size: 0.8rem;
+}
+
+.footer-wrapper .quick-links-container,
+.footer-wrapper .opening-hours-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footer-wrapper .quick-links-container p,
+.footer-wrapper .opening-hours-container p:first-child {
+    color: var(--yellow);
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.footer-wrapper .quick-links-container ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.footer-wrapper .quick-links-container li {
+    list-style-type: none;
+    width: fit-content;
+    transition: all 160ms ease-in;
+}
+
+.footer-wrapper .quick-links-container li:hover a {
+    color: var(--yellow);
+}
+
+footer .copyright-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    border-top: 2px solid var(--yellow);
+    padding-block: 1.5rem;
+}
+
+footer .developer-name {
+    font-family: "Orbitron", sans-serif;
+    font-weight: 700;
+    color: var(--yellow);
+    letter-spacing: 1.5px;
+    width: 167px;
+}
+
+
+/* ── Scroll Reveal Animations ── */
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-60px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(60px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-stagger > * {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-stagger.visible > *:nth-child(1) { opacity:1; transform:translateY(0); transition-delay: 0.05s; }
+.reveal-stagger.visible > *:nth-child(2) { opacity:1; transform:translateY(0); transition-delay: 0.15s; }
+.reveal-stagger.visible > *:nth-child(3) { opacity:1; transform:translateY(0); transition-delay: 0.25s; }
+.reveal-stagger.visible > *:nth-child(4) { opacity:1; transform:translateY(0); transition-delay: 0.35s; }
+.reveal-stagger.visible > *:nth-child(5) { opacity:1; transform:translateY(0); transition-delay: 0.45s; }
+.reveal-stagger.visible > *:nth-child(6) { opacity:1; transform:translateY(0); transition-delay: 0.55s; }
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal, .reveal-left, .reveal-right,
+    .reveal-stagger > * {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
